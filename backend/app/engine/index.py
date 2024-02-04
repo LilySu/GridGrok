@@ -7,8 +7,7 @@ import os
 from llama_index import (
     StorageContext,
     SimpleDirectoryReader,
-    VectorStoreIndex,
-    load_index_from_storage
+    VectorStoreIndex
 )
 
 from app.engine.constants import STORAGE_DIR
