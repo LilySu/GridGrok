@@ -7,8 +7,11 @@ Our aim is to enable semantic search on academic paper evaluation-metrics-tables
 ## Getting Started
 
 1. Create a `.env` file based on the `.env` example (see below)
-2. Install the dependencies with e.g. `pip install -r requirements.txt`. _(Python 3.8+ required. Working in a virtual environment is suggested as general best practice)_.
-3. Run the app with `python app.py` !
+2. Navigate to the frontend directory --> 
+`npm install`
+`npm run dev`
+3. Navigate to the backend directory --> Install the dependencies with e.g. `pip install -r requirements.txt`. _(Python 3.8+ required. Working in a virtual environment is suggested as general best practice)_.
+4. Within the backend directory, run the app with `python main.py` !
 
 ### The dot-env file
 
