@@ -20,7 +20,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
 # Load documents
-documents = SimpleDirectoryReader(r"/Users/lily/git/hello-llamaindex-astra/data").load_data()
+documents = SimpleDirectoryReader(r"data").load_data()
 print(f"Total documents: {len(documents)}")
 print(f"First document, id: {documents[0].doc_id}")
 print(f"First document, hash: {documents[0].hash}")
@@ -31,11 +31,13 @@ print(
     f"{documents[0].text[:360]} ..."
 )
 
+# collection = db.create_collection("faiss", dimension=1536, metric="cosine")
+
 # Create a vector store instance
 astra_db_store = AstraDBVectorStore(
     token=ASTRA_DB_APPLICATION_TOKEN,
     api_endpoint=ASTRA_DB_API_ENDPOINT,
-    collection_name=collection,
+    collection_name="base",
     embedding_dimension=1536,
 )
 
